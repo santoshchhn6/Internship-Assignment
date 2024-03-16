@@ -26,9 +26,9 @@ export default function Dashboard() {
       <ReactFlow
         nodes={nodes}
         edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
-        onConnect={onConnect}
+        // onNodesChange={onNodesChange}
+        // onEdgesChange={onEdgesChange}
+        // onConnect={onConnect}
       >
         <Controls />
         <Background variant="dots" gap={12} size={1} />
