@@ -1,4 +1,5 @@
 import Dashboard from "./Dashboard";
+import "./index.css"; 
 
 const App = () => {
   return (

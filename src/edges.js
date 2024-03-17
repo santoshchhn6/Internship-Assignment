@@ -4,10 +4,10 @@ const customNode = {
   type: "step",
   markerEnd: {
     type: MarkerType.ArrowClosed,
-    color: "#000",
+    color: "#2a4494",
   },
   style: {
-    stroke: "#000",
+    stroke: "#2a4494",
   },
 };
 

@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+ .customNode{
+    /* background: yellow; */
+    padding: 8px;
+    /* border: 1px solid black; */
+    color: #222;
+    border-radius: 5px;
+    min-width: 150px;
+    text-align: center;
+    font-family: 'Poppin';
+ }
+
+ .customNode:hover{
+    /* background-color: wheat; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* color:black; */
+    transition: transform 0.2s ease-in-out; 
+ }
+
+ @font-face {
+    font-family: "Poppin";
+    src: url("./assets/fonts/Poppins-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "Poppin-sb";
+    src: url("./assets/fonts/Poppins-SemiBold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Poppin-b";
+    src: url("./assets/fonts/Poppins-Bold.ttf");
+  }

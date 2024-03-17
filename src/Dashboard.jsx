@@ -11,6 +11,7 @@ import ReactFlow, {
 import "reactflow/dist/style.css";
 import { initialEdges } from "./edges";
 import { initialNodes } from "./nodes";
+import { nodeTypes } from "./CustomNode";
 
 export default function Dashboard() {
   const [nodes, , onNodesChange] = useNodesState(initialNodes);
@@ -26,6 +27,7 @@ export default function Dashboard() {
       <ReactFlow
         nodes={nodes}
         edges={edges}
+        nodeTypes={nodeTypes}
         // onNodesChange={onNodesChange}
         // onEdgesChange={onEdgesChange}
         // onConnect={onConnect}

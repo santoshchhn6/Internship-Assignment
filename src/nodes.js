@@ -1,22 +1,23 @@
 const customNodes = {
   targetPosition: "left",
   sourcePosition: "right",
+  type: "customNode",
 };
 
 const colorBlue = {
-  style: { backgroundColor: "#2a4494", color: "white" },
+  style: { backgroundColor: "#2a4494", color: "white" ,borderRadius:"5px"},
 };
 const colorLightBlue = {
-  style: { backgroundColor: "#82b3e8" },
+  style: { backgroundColor: "#82b3e8" ,borderRadius:"5px"},
 };
 const colorOrange = {
-  style: { backgroundColor: "#e96343" },
+  style: { backgroundColor: "#e96343" ,borderRadius:"5px"},
 };
 const colorPink = {
-  style: { backgroundColor: "#e8919d" },
+  style: { backgroundColor: "#e8919d" ,borderRadius:"5px"},
 };
 const colorViolet = {
-  style: { backgroundColor: "#a684eb" },
+  style: { backgroundColor: "#a684eb" ,borderRadius:"5px"},
 };
 
 const mainNodes = [
@@ -195,7 +196,8 @@ export const initialNodes = [
     position: { x: 100, y: 300 },
     data: { label: "Start" },
     sourcePosition: "right",
-    type: "input",
+    type: "customNode",
+    ...colorBlue
   },
   ...mainNodes,
   ...researchNodes,
