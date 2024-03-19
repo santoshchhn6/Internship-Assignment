@@ -190,6 +190,13 @@ const b2cNodes = [
   },
 ];
 
+const cardNode={
+  id:"card",
+  position: { x: 100, y: 100 },
+  data: { label: "Card" },
+  type: "cardNode",
+}
+
 export const initialNodes = [
   {
     id: "start",
@@ -199,6 +206,7 @@ export const initialNodes = [
     type: "customNode",
     ...colorBlue
   },
+
   ...mainNodes,
   ...researchNodes,
   ...planningNodes,
@@ -214,4 +222,5 @@ export const initialNodes = [
     targetPosition: "left",
     type: "output",
   },
+  cardNode
 ];

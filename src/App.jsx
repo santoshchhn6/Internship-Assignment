@@ -1,4 +1,5 @@
-import Dashboard from "./Dashboard";
+import Dashboard from "./Components/Dashboard";
+import ResearchOnlineDetails from "./Components/ResearchOnlineDetails";
 import "./index.css"; 
 
 const App = () => {
