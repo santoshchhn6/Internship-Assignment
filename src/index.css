@@ -1,53 +1,51 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-.card{
-  background: wheat ;
-  font-family: 'Poppin';
-  padding: 10px;  
-  min-width: 150px;
-  border-radius: 5px;
-}
-
- .customNode{
-    /* background: yellow; */
-    padding: 8px;
-    /* border: 1px solid black; */
-    /* color: #222;  */
-    border-radius: 5px;
-    min-width: 150px;
-    text-align: center;
-    font-family: 'Poppin';
- }
-
- .customNode:hover{
-    /* background-color: wheat; */
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    /* color:black; */
-    transition: transform 0.2s ease-in-out; 
- }
-
- .ResearchOnLineDetails{
+.card {
   background: wheat;
+  font-family: "Poppin";
+  text-align: center;
+  padding: 10px;
+  min-width: 250px;
+  min-height: 150px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.ResearchOnLineDetails {
   width: 300px;
   height: 200px;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
- }
+}
 
- @font-face {
-    font-family: "Poppin";
-    src: url("./assets/fonts/Poppins-Regular.ttf");
-  }
-  
-  @font-face {
-    font-family: "Poppin-sb";
-    src: url("./assets/fonts/Poppins-SemiBold.ttf");
-  }
-  
-  @font-face {
-    font-family: "Poppin-b";
-    src: url("./assets/fonts/Poppins-Bold.ttf");
-  }
+.customNode {
+  padding: 8px;
+  /* border: 1px solid black; */
+  /* color: #222;  */
+  border-radius: 5px;
+  min-width: 150px;
+  text-align: center;
+  font-family: "Poppin";
+}
+
+.customNode:hover {
+  /* background-color: wheat; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* color:black; */
+  transition: transform 0.2s ease-in-out;
+}
+
+@font-face {
+  font-family: "Poppin";
+  src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppin-sb";
+  src: url("./assets/fonts/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppin-b";
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}

@@ -1,6 +1,5 @@
 import Dashboard from "./Components/Dashboard";
-import ResearchOnlineDetails from "./Components/ResearchOnlineDetails";
-import "./index.css"; 
+import "./index.css";
 
 const App = () => {
   return (

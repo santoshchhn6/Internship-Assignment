@@ -5,19 +5,19 @@ const customNodes = {
 };
 
 const colorBlue = {
-  style: { backgroundColor: "#2a4494", color: "white" ,borderRadius:"5px"},
+  style: { backgroundColor: "#2a4494", color: "white", borderRadius: "5px" },
 };
 const colorLightBlue = {
-  style: { backgroundColor: "#82b3e8" ,borderRadius:"5px"},
+  style: { backgroundColor: "#82b3e8", borderRadius: "5px" },
 };
 const colorOrange = {
-  style: { backgroundColor: "#e96343" ,borderRadius:"5px"},
+  style: { backgroundColor: "#e96343", borderRadius: "5px" },
 };
 const colorPink = {
-  style: { backgroundColor: "#e8919d" ,borderRadius:"5px"},
+  style: { backgroundColor: "#e8919d", borderRadius: "5px" },
 };
 const colorViolet = {
-  style: { backgroundColor: "#a684eb" ,borderRadius:"5px"},
+  style: { backgroundColor: "#a684eb", borderRadius: "5px" },
 };
 
 const mainNodes = [
@@ -190,12 +190,12 @@ const b2cNodes = [
   },
 ];
 
-const cardNode={
-  id:"card",
+const cardNode = {
+  id: "card",
   position: { x: 100, y: 100 },
   data: { label: "Card" },
   type: "cardNode",
-}
+};
 
 export const initialNodes = [
   {
@@ -204,7 +204,7 @@ export const initialNodes = [
     data: { label: "Start" },
     sourcePosition: "right",
     type: "customNode",
-    ...colorBlue
+    ...colorBlue,
   },
 
   ...mainNodes,
@@ -222,5 +222,5 @@ export const initialNodes = [
     targetPosition: "left",
     type: "output",
   },
-  cardNode
+  cardNode,
 ];

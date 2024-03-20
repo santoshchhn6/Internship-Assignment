@@ -1,14 +1,14 @@
-
+import ResearchOnlineDetails from "./Details/ResearchOnlineDetails";
 
 export default function CardNode({ data }) {
+  switch (data.detail) {
+    case "research":
+      return <ResearchOnlineDetails />;
 
- return (
-  <div className="card">
-      <div>
-        <label htmlFor="text">{data.label}</label>
-      </div>
-     
-    </div>
-    
- );
-}   
+    case "b2c-online":
+      return <ResearchOnlineDetails />;
+
+    default:
+      return <div className="card">No Data</div>;
+  }
+}
