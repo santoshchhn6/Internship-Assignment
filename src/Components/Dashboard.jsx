@@ -1,10 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ReactFlow, {
   Controls,
   Background,
   useNodesState,
   useEdgesState,
-  addEdge,
 } from "reactflow";
 
 import "reactflow/dist/style.css";
@@ -12,13 +11,18 @@ import { initialNodes } from "../utils/nodes";
 import { initialEdges } from "../utils/edges";
 import CustomNode from "./CustomNode";
 import CardNode from "./CardNodes";
+import StartNode from "./StartNode";
 
-const nodeType = { customNode: CustomNode, cardNode: CardNode };
+const nodeType = {
+  customNode: CustomNode,
+  cardNode: CardNode,
+  startNode: StartNode,
+};
 
 export default function Dashboard() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-  const [hoveredNode, setHoveredNode] = useState(null);
+  const [edges] = useEdgesState(initialEdges);
+  const [, setHoveredNode] = useState(null);
 
   useEffect(() => {
     const cardNode = nodes.find((node) => node.id === "card");
@@ -26,21 +30,16 @@ export default function Dashboard() {
     cardNode.hidden = true;
   }, []);
 
-  const onConnect = useCallback(
-    (params) => setEdges((eds) => addEdge(params, eds)),
-    [setEdges]
-  );
-
   const onNodeMouseEnter = (event, node) => {
-    if (node.id === "card") return;
+    if (node.id === "card" || node.id === "start") return;
     console.log("mouse enter: " + node.id);
     setHoveredNode(node.id);
     setNodes((nds) =>
       nds.map((nd) => {
         if (nd.id === "card") {
           nd.data.detail = node.id;
-          nd.position.x = node.position.x;
-          nd.position.y = node.position.y + 50;
+          nd.position.x = node.position.x + 160;
+          nd.position.y = node.position.y;
           nd.hidden = false;
         }
         return nd;
@@ -49,7 +48,7 @@ export default function Dashboard() {
   };
 
   const onNodeMouseLeave = (event, node) => {
-    if (node.id === "card") return;
+    if (node.id === "card" || node.id === "start") return;
     console.log("mouse leave: " + node.id);
     setHoveredNode(null);
     setNodes((nds) =>
@@ -69,8 +68,6 @@ export default function Dashboard() {
         edges={edges}
         nodeTypes={nodeType}
         onNodesChange={onNodesChange}
-        // onEdgesChange={onEdgesChange}
-        // onConnect={onConnect}
         onNodeMouseEnter={onNodeMouseEnter}
         onNodeMouseLeave={onNodeMouseLeave}
       >

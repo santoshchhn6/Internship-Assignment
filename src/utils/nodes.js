@@ -197,16 +197,23 @@ const cardNode = {
   type: "cardNode",
 };
 
-export const initialNodes = [
-  {
-    id: "start",
-    position: { x: 100, y: 300 },
-    data: { label: "Start" },
-    sourcePosition: "right",
-    type: "customNode",
-    ...colorBlue,
-  },
+const startNode = {
+  id: "start",
+  position: { x: 100, y: 300 },
+  data: { label: "Start" },
+  type: "startNode",
+};
 
+// const endNode = {
+//   id: "research-end",
+//   position: { x: 1100, y: 75 },
+//   data: { label: "Stop" },
+//   targetPosition: "left",
+//   type: "output",
+// };
+
+export const initialNodes = [
+  startNode,
   ...mainNodes,
   ...researchNodes,
   ...planningNodes,
@@ -215,12 +222,6 @@ export const initialNodes = [
   ...sales_marketingNodes,
   ...externalNodes,
   ...b2cNodes,
-  {
-    id: "research-end",
-    position: { x: 1100, y: 75 },
-    data: { label: "Stop" },
-    targetPosition: "left",
-    type: "output",
-  },
+  // endNode,
   cardNode,
 ];
