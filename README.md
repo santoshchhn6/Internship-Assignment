@@ -9,3 +9,5 @@
    ```bash
    npm run dev
    ```
+3. Open 'http://localhost:5173/' in browser
+
